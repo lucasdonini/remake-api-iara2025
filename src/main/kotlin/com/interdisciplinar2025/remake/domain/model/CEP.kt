@@ -1,4 +1,4 @@
-package com.interdisciplinar2025.remake.domain
+package com.interdisciplinar2025.remake.domain.model
 
 class CEP private constructor(val value: String) {
     init {

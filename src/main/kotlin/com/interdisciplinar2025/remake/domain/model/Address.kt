@@ -1,4 +1,4 @@
-package com.interdisciplinar2025.remake.domain
+package com.interdisciplinar2025.remake.domain.model
 
 class Address private constructor(
     val state: String,

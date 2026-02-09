@@ -1,11 +1,11 @@
 package com.interdisciplinar2025.remake.domain
 
 import com.interdisciplinar2025.remake.common.builders.PlanBuilder
+import com.interdisciplinar2025.remake.domain.model.Plan
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertThrows
 import java.time.Period
-import kotlin.test.assertSame
 
 class PlanTests {
     private lateinit var sut: Plan

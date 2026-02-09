@@ -1,5 +1,6 @@
 package com.interdisciplinar2025.remake.domain
 
+import com.interdisciplinar2025.remake.domain.model.CEP
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertThrows
 import org.junit.jupiter.params.ParameterizedTest
