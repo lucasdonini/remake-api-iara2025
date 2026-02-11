@@ -6,9 +6,9 @@ plugins {
     id 'org.jetbrains.kotlin.plugin.jpa' version '2.2.21'
 }
 
-group = 'com.interdisciplinar2025'
+group = 'com.iaratech2025'
 version = '0.0.1-SNAPSHOT'
-description = 'remake-inter2025'
+description = 'remake2026'
 
 java {
     toolchain {
