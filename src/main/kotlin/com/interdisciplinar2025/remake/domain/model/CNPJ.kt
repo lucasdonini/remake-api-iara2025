@@ -19,4 +19,10 @@ class CNPJ private constructor(val value: String) {
         val matcher = pattern.matcher(cnpj)
         return matcher.matches()
     }
+
+    override fun equals(other: Any?): Boolean {
+        if (this === other) return true
+        if (other !is CNPJ) return false
+        return value == other.value
+    }
 }

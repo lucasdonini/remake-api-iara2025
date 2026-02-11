@@ -13,8 +13,13 @@ class Email private constructor(val value: String) {
         require(matcher.matches()) { "Invalid email format" }
     }
 
-
     companion object {
         fun create(value: String): Email = Email(value)
+    }
+
+    override fun equals(other: Any?): Boolean {
+        if (this === other) return true
+        if (other !is Email) return false
+        return value == other.value
     }
 }
