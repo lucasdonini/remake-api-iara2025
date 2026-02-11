@@ -68,4 +68,12 @@ class User private constructor(
         REGISTER_ABACUS,
         REGISTER_USER
     }
+
+    enum class UserSortableField : SortableField<User> {
+        MANAGER,
+        GENDER,
+        ROLE,
+        PERMISSIONS,
+        EMPLOYER_FACTORY_ID
+    }
 }

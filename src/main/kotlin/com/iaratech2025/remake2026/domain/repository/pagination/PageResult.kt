@@ -1,4 +1,4 @@
-package com.iaratech2025.remake2026.application.shared.pagination
+package com.iaratech2025.remake2026.domain.repository.pagination
 
 data class PageResult<T>(
     val content: List<T>,

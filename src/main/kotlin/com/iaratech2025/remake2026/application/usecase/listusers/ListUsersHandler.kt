@@ -9,17 +9,6 @@ import org.springframework.stereotype.Component
 
 @Component
 class ListUsersHandler(val repository: UserRepository) {
-    fun handle(filter: UserFilter, pagination: Pagination): PageResult<User> {
-        val allUsers = repository.findAll(filter)
-        val paged = allUsers
-            .drop(pagination.offset().toInt())
-            .take(pagination.size.toInt())
-
-        return PageResult(
-            content = paged,
-            totalElements = allUsers.size.toULong(),
-            page = pagination.page,
-            size = pagination.size
-        )
-    }
+    fun handle(filter: UserFilter, pagination: Pagination<User>): PageResult<User> =
+        repository.findAll(filter, pagination)
 }
