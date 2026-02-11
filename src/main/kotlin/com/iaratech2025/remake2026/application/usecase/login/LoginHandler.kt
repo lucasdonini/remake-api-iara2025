@@ -1,8 +1,8 @@
 package com.iaratech2025.remake2026.application.usecase.login
 
-import com.interdisciplinar2025.remake.application.port.PasswordHasher
-import com.interdisciplinar2025.remake.domain.exception.NotFoundException
-import com.interdisciplinar2025.remake.domain.repository.UserRepository
+import com.iaratech2025.remake2026.application.port.PasswordHasher
+import com.iaratech2025.remake2026.domain.exception.NotFoundException
+import com.iaratech2025.remake2026.domain.repository.UserRepository
 import org.springframework.stereotype.Component
 
 @Component

@@ -1,7 +1,7 @@
 package com.iaratech2025.remake2026.domain.filter
 
-import com.interdisciplinar2025.remake.domain.model.User
-import java.util.UUID
+import com.iaratech2025.remake2026.domain.model.User
+import java.util.*
 
 data class UserFilter(
     val gender: User.Gender? = null,

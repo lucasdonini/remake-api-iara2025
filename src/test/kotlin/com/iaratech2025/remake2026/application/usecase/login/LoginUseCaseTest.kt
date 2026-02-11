@@ -1,10 +1,10 @@
 package com.iaratech2025.remake2026.application.usecase.login
 
-import com.interdisciplinar2025.remake.application.port.PasswordHasher
-import com.interdisciplinar2025.remake.common.builders.UserBuilder
-import com.interdisciplinar2025.remake.domain.exception.NotFoundException.UserNotFoundByEmail
-import com.interdisciplinar2025.remake.domain.model.Email
-import com.interdisciplinar2025.remake.domain.repository.UserRepository
+import com.iaratech2025.remake2026.application.port.PasswordHasher
+import com.iaratech2025.remake2026.common.builders.UserBuilder
+import com.iaratech2025.remake2026.domain.exception.NotFoundException.UserNotFoundByEmail
+import com.iaratech2025.remake2026.domain.model.Email
+import com.iaratech2025.remake2026.domain.repository.UserRepository
 import io.mockk.every
 import io.mockk.mockk
 import org.junit.jupiter.api.BeforeEach

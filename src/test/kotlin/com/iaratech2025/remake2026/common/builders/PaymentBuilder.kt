@@ -1,8 +1,8 @@
 package com.iaratech2025.remake2026.common.builders
 
-import com.interdisciplinar2025.remake.domain.model.Payment
-import com.interdisciplinar2025.remake.domain.model.Payment.PaymentMethod
-import com.interdisciplinar2025.remake.domain.model.Payment.PaymentStatus
+import com.iaratech2025.remake2026.domain.model.Payment
+import com.iaratech2025.remake2026.domain.model.Payment.PaymentMethod
+import com.iaratech2025.remake2026.domain.model.Payment.PaymentStatus
 import java.time.LocalDateTime
 import java.util.*
 

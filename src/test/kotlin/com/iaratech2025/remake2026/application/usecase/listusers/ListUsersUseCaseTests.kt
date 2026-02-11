@@ -1,15 +1,14 @@
 package com.iaratech2025.remake2026.application.usecase.listusers
 
-import com.interdisciplinar2025.remake.application.shared.pagination.Pagination
-import com.interdisciplinar2025.remake.domain.filter.UserFilter
-import com.interdisciplinar2025.remake.domain.model.User
-import com.interdisciplinar2025.remake.domain.repository.UserRepository
+import com.iaratech2025.remake2026.domain.repository.pagination.Pagination
+import com.iaratech2025.remake2026.domain.filter.UserFilter
+import com.iaratech2025.remake2026.domain.model.User
+import com.iaratech2025.remake2026.domain.repository.UserRepository
 import io.mockk.every
 import io.mockk.mockk
 import io.mockk.verify
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
-import kotlin.collections.listOf
 
 class ListUsersUseCaseTests {
 

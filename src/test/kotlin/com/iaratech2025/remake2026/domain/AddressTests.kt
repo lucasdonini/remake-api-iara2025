@@ -1,7 +1,7 @@
 package com.iaratech2025.remake2026.domain
 
-import com.interdisciplinar2025.remake.common.builders.AddressBuilder
-import com.interdisciplinar2025.remake.domain.model.Address
+import com.iaratech2025.remake2026.common.builders.AddressBuilder
+import com.iaratech2025.remake2026.domain.model.Address
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertThrows

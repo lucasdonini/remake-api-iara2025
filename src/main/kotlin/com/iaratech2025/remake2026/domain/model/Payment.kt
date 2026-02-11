@@ -1,6 +1,6 @@
 package com.iaratech2025.remake2026.domain.model
 
-import com.interdisciplinar2025.remake.domain.shared.EMPTY_UUID
+import com.iaratech2025.remake2026.domain.shared.EMPTY_UUID
 import java.time.LocalDateTime
 import java.util.*
 

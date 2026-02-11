@@ -1,11 +1,11 @@
 package com.iaratech2025.remake2026.common.builders
 
-import com.interdisciplinar2025.remake.domain.model.Address
-import com.interdisciplinar2025.remake.domain.model.CEP
-import com.interdisciplinar2025.remake.domain.model.CNPJ
-import com.interdisciplinar2025.remake.domain.model.Email
-import com.interdisciplinar2025.remake.domain.model.Factory
-import com.interdisciplinar2025.remake.domain.model.Plan
+import com.iaratech2025.remake2026.domain.model.Address
+import com.iaratech2025.remake2026.domain.model.CEP
+import com.iaratech2025.remake2026.domain.model.CNPJ
+import com.iaratech2025.remake2026.domain.model.Email
+import com.iaratech2025.remake2026.domain.model.Factory
+import com.iaratech2025.remake2026.domain.model.Plan
 
 class FactoryBuilder {
     private var cnpj: CNPJ = CNPJ.create("02.914.460/0192-50")

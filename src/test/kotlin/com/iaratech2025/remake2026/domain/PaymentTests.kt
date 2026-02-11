@@ -1,9 +1,9 @@
 package com.iaratech2025.remake2026.domain
 
-import com.interdisciplinar2025.remake.common.builders.PaymentBuilder
-import com.interdisciplinar2025.remake.domain.model.Payment
-import com.interdisciplinar2025.remake.domain.model.Payment.PaymentStatus
-import com.interdisciplinar2025.remake.domain.shared.EMPTY_UUID
+import com.iaratech2025.remake2026.common.builders.PaymentBuilder
+import com.iaratech2025.remake2026.domain.model.Payment
+import com.iaratech2025.remake2026.domain.model.Payment.PaymentStatus
+import com.iaratech2025.remake2026.domain.shared.EMPTY_UUID
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertDoesNotThrow

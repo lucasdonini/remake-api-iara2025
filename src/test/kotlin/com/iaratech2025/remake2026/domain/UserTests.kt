@@ -1,8 +1,8 @@
 package com.iaratech2025.remake2026.domain
 
-import com.interdisciplinar2025.remake.common.builders.UserBuilder
-import com.interdisciplinar2025.remake.domain.model.User
-import com.interdisciplinar2025.remake.domain.shared.EMPTY_UUID
+import com.iaratech2025.remake2026.common.builders.UserBuilder
+import com.iaratech2025.remake2026.domain.model.User
+import com.iaratech2025.remake2026.domain.shared.EMPTY_UUID
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertThrows

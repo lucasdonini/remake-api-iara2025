@@ -1,7 +1,7 @@
 package com.iaratech2025.remake2026.domain.model
 
-import com.interdisciplinar2025.remake.domain.shared.EMPTY_UUID
-import java.util.UUID
+import com.iaratech2025.remake2026.domain.shared.EMPTY_UUID
+import java.util.*
 
 abstract class AggregateRoot {
     val id: UUID = EMPTY_UUID

@@ -4,6 +4,7 @@ import java.util.regex.Pattern
 
 const val EMAIL_VALIDATION_REGEX: String = "^\\w+(\\.\\w+)*@\\w+(\\.\\w+)+"
 
+//TODO: implement hashCode()
 class Email private constructor(val value: String) {
     init {
         require(value.isNotBlank()) { "The email cannot be blank" }

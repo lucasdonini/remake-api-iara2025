@@ -1,5 +1,6 @@
 package com.iaratech2025.remake2026.domain.model
 
+// TODO: implement hashCode()
 class CEP private constructor(val value: String) {
     init {
         require(value.length == 8)

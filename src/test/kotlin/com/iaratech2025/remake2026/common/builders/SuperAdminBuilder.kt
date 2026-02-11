@@ -1,7 +1,7 @@
 package com.iaratech2025.remake2026.common.builders
 
-import com.interdisciplinar2025.remake.domain.model.Email
-import com.interdisciplinar2025.remake.domain.model.SuperAdmin
+import com.iaratech2025.remake2026.domain.model.Email
+import com.iaratech2025.remake2026.domain.model.SuperAdmin
 
 class SuperAdminBuilder {
     private var name: String = "Lucas Kluska Donini"

@@ -1,7 +1,7 @@
 package com.iaratech2025.remake2026.domain.repository
 
-import com.interdisciplinar2025.remake.domain.filter.UserFilter
-import com.interdisciplinar2025.remake.domain.model.User
+import com.iaratech2025.remake2026.domain.filter.UserFilter
+import com.iaratech2025.remake2026.domain.model.User
 
 interface UserRepository {
     fun getByEmail(email: String): User?

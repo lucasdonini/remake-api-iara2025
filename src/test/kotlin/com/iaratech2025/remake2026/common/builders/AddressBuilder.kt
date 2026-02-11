@@ -1,7 +1,7 @@
 package com.iaratech2025.remake2026.common.builders
 
-import com.interdisciplinar2025.remake.domain.model.Address
-import com.interdisciplinar2025.remake.domain.model.CEP
+import com.iaratech2025.remake2026.domain.model.Address
+import com.iaratech2025.remake2026.domain.model.CEP
 
 class AddressBuilder {
     private var state: String = "São Paulo"

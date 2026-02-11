@@ -1,7 +1,7 @@
 package com.iaratech2025.remake2026.domain
 
-import com.interdisciplinar2025.remake.common.builders.SuperAdminBuilder
-import com.interdisciplinar2025.remake.domain.model.SuperAdmin
+import com.iaratech2025.remake2026.common.builders.SuperAdminBuilder
+import com.iaratech2025.remake2026.domain.model.SuperAdmin
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertThrows

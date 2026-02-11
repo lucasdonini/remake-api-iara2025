@@ -1,7 +1,7 @@
 package com.iaratech2025.remake2026.domain
 
-import com.interdisciplinar2025.remake.common.builders.PlanBuilder
-import com.interdisciplinar2025.remake.domain.model.Plan
+import com.iaratech2025.remake2026.common.builders.PlanBuilder
+import com.iaratech2025.remake2026.domain.model.Plan
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertThrows

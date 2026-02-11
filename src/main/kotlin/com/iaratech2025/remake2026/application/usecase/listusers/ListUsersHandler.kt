@@ -1,10 +1,10 @@
 package com.iaratech2025.remake2026.application.usecase.listusers
 
-import com.iaratech2025.remake2026.application.shared.pagination.PageResult
-import com.iaratech2025.remake2026.application.shared.pagination.Pagination
 import com.iaratech2025.remake2026.domain.filter.UserFilter
 import com.iaratech2025.remake2026.domain.model.User
 import com.iaratech2025.remake2026.domain.repository.UserRepository
+import com.iaratech2025.remake2026.domain.repository.pagination.PageResult
+import com.iaratech2025.remake2026.domain.repository.pagination.Pagination
 import org.springframework.stereotype.Component
 
 @Component

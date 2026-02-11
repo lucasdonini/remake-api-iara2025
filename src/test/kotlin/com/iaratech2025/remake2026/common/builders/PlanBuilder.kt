@@ -1,6 +1,6 @@
 package com.iaratech2025.remake2026.common.builders
 
-import com.interdisciplinar2025.remake.domain.model.Plan
+import com.iaratech2025.remake2026.domain.model.Plan
 import java.time.Period
 
 class PlanBuilder private constructor() {

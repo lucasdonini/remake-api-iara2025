@@ -1,11 +1,11 @@
 package com.iaratech2025.remake2026.common.builders
 
-import com.interdisciplinar2025.remake.domain.model.Email
-import com.interdisciplinar2025.remake.domain.model.User
+import com.iaratech2025.remake2026.domain.model.Email
+import com.iaratech2025.remake2026.domain.model.User
 import java.time.Clock
 import java.time.LocalDate
 import java.time.LocalDateTime
-import java.util.UUID
+import java.util.*
 
 class UserBuilder(private val clock: Clock) {
     private var manager: User? = null
