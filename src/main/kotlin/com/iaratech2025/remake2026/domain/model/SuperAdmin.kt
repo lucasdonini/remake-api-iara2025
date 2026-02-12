@@ -47,4 +47,6 @@ class SuperAdmin private constructor(
             passwordHash = passwordHash
         )
     }
+
+    enum class SuperAdmSortableField : SortableField<SuperAdmin> { NAME, JOB, EMAIL }
 }
