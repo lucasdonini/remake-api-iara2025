@@ -60,7 +60,7 @@ class UpdateUserUseCaseTests {
         every { repository.findById(any()) } returns null
         val command = UpdateUserCommand(EMPTY_UUID)
 
-        assertThrows<NotFoundException.UserNotFoundById> { sut.handle(command) }
+        assertThrows<NotFoundException.UserNotFoundByIdException> { sut.handle(command) }
         verify(exactly = 1) { repository.findById(command.id) }
     }
 }

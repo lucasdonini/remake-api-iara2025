@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component
 class UpdateUserHandler(val repository: UserRepository) {
 
     fun handle(command: UpdateUserCommand): User {
-        val user = repository.findById(command.id) ?: throw NotFoundException.UserNotFoundById(command.id.toString())
+        val user = repository.findById(command.id) ?: throw NotFoundException.UserNotFoundByIdException(command.id.toString())
 
         command.name?.let { user.name = it }
         command.isActive?.let { user.isActive = it }

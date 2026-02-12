@@ -2,7 +2,7 @@ package com.iaratech2025.remake2026.application.usecase.login
 
 import com.iaratech2025.remake2026.application.port.PasswordHasher
 import com.iaratech2025.remake2026.common.builders.UserBuilder
-import com.iaratech2025.remake2026.domain.exception.NotFoundException.UserNotFoundByEmail
+import com.iaratech2025.remake2026.domain.exception.NotFoundException.UserNotFoundByEmailException
 import com.iaratech2025.remake2026.domain.model.Email
 import com.iaratech2025.remake2026.domain.repository.UserRepository
 import io.mockk.every
@@ -28,7 +28,7 @@ class LoginUseCaseTest {
         val command = LoginCommand(Email.create("example@email.com"), "12345678")
         every { repository.getByEmail(any()) } returns null
 
-        assertThrows<UserNotFoundByEmail> { sut.handle(command) }
+        assertThrows<UserNotFoundByEmailException> { sut.handle(command) }
     }
 
     @Test
