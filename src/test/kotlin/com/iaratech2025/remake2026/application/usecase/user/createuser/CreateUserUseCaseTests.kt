@@ -1,6 +1,8 @@
-package com.iaratech2025.remake2026.application.usecase.createuser
+package com.iaratech2025.remake2026.application.usecase.user.createuser
 
 import com.iaratech2025.remake2026.application.port.PasswordHasher
+import com.iaratech2025.remake2026.application.usecase.user.createuser.CreateUserCommand
+import com.iaratech2025.remake2026.application.usecase.user.createuser.CreateUserHandler
 import com.iaratech2025.remake2026.common.builders.UserBuilder
 import com.iaratech2025.remake2026.domain.repository.UserRepository
 import io.mockk.every

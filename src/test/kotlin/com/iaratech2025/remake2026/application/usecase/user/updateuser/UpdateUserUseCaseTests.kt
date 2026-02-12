@@ -1,5 +1,7 @@
-package com.iaratech2025.remake2026.application.usecase.updateuser
+package com.iaratech2025.remake2026.application.usecase.user.updateuser
 
+import com.iaratech2025.remake2026.application.usecase.user.updateuser.UpdateUserCommand
+import com.iaratech2025.remake2026.application.usecase.user.updateuser.UpdateUserHandler
 import com.iaratech2025.remake2026.common.builders.UserBuilder
 import com.iaratech2025.remake2026.domain.exception.NotFoundException
 import com.iaratech2025.remake2026.domain.model.Email

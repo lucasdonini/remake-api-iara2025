@@ -1,4 +1,4 @@
-package com.iaratech2025.remake2026.application.usecase.deleteuser
+package com.iaratech2025.remake2026.application.usecase.user.deleteuser
 
 import com.iaratech2025.remake2026.domain.repository.UserRepository
 import org.springframework.stereotype.Component

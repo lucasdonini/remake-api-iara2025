@@ -1,4 +1,4 @@
-package com.iaratech2025.remake2026.application.usecase.login
+package com.iaratech2025.remake2026.application.usecase.user.login
 
 import com.iaratech2025.remake2026.application.port.PasswordHasher
 import com.iaratech2025.remake2026.domain.exception.NotFoundException

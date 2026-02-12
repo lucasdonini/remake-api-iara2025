@@ -1,4 +1,4 @@
-package com.iaratech2025.remake2026.application.usecase.updateuser
+package com.iaratech2025.remake2026.application.usecase.user.updateuser
 
 import com.iaratech2025.remake2026.domain.model.Email
 import com.iaratech2025.remake2026.domain.model.User

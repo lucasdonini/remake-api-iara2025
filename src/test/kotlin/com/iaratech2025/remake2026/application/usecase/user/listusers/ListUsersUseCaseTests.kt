@@ -1,5 +1,6 @@
-package com.iaratech2025.remake2026.application.usecase.listusers
+package com.iaratech2025.remake2026.application.usecase.user.listusers
 
+import com.iaratech2025.remake2026.application.usecase.user.listusers.ListUsersHandler
 import com.iaratech2025.remake2026.domain.repository.pagination.Pagination
 import com.iaratech2025.remake2026.domain.filter.UserFilter
 import com.iaratech2025.remake2026.domain.model.User

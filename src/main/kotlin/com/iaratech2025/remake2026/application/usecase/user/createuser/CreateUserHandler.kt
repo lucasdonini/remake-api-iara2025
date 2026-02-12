@@ -1,4 +1,4 @@
-package com.iaratech2025.remake2026.application.usecase.createuser
+package com.iaratech2025.remake2026.application.usecase.user.createuser
 
 import com.iaratech2025.remake2026.application.port.PasswordHasher
 import com.iaratech2025.remake2026.domain.model.User
