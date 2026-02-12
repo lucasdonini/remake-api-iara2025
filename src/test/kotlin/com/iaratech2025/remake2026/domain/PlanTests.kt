@@ -65,4 +65,43 @@ class PlanTests {
         assert(plan.description == sut.description)
         assert(plan.duration == sut.duration)
     }
+
+    @Test
+    fun `if Name is blank, should fail to update object`() {
+        assertThrows<IllegalArgumentException> {
+            sut.name = " "
+        }
+    }
+
+    @Test
+    fun `if Price is negative, should fail to update object`() {
+        assertThrows<IllegalArgumentException> {
+            sut.price = -1.0
+        }
+    }
+
+    @Test
+    fun `if duration is less than a month, should fail to update object`() {
+        assertThrows<IllegalArgumentException> {
+            sut.duration = Period.ofDays(29)
+        }
+    }
+
+    @Test
+    fun `if all data is correct, should update object`() {
+        val newName = "New Plan Name"
+        val newPrice = 199.99
+        val newDescription = "Updated description for the plan."
+        val newDuration = Period.ofMonths(6)
+
+        sut.name = newName
+        sut.price = newPrice
+        sut.description = newDescription
+        sut.duration = newDuration
+
+        assert(sut.name == newName)
+        assert(sut.price == newPrice)
+        assert(sut.description == newDescription)
+        assert(sut.duration == newDuration)
+    }
 }

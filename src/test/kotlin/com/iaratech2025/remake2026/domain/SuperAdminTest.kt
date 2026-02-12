@@ -64,4 +64,40 @@ class SuperAdminTest {
             )
         }
     }
+
+    @Test
+    fun `should update SuperAdmin successfully`() {
+        val newName = "New Name"
+        val newJob = "New Job"
+        val newPasswordHash = "NewPasswordHash"
+
+        sut.name = newName
+        sut.job = newJob
+        sut.passwordHash = newPasswordHash
+
+        assert(sut.name == newName)
+        assert(sut.job == newJob)
+        assert(sut.passwordHash == newPasswordHash)
+    }
+
+    @Test
+    fun `if Name is blank, shouldn't update SuperAdmin`() {
+        assertThrows<IllegalArgumentException> {
+            sut.name = "   "
+        }
+    }
+
+    @Test
+    fun `if Job is blank, shouldn't update SuperAdmin`() {
+        assertThrows<IllegalArgumentException> {
+            sut.job = "   "
+        }
+    }
+
+    @Test
+    fun `if Password is blank, shouldn't update SuperAdmin`() {
+        assertThrows<IllegalArgumentException> {
+            sut.passwordHash = "   "
+        }
+    }
 }

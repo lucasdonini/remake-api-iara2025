@@ -6,28 +6,59 @@ import java.time.LocalDate
 import java.time.LocalDateTime
 import java.util.*
 
+private const val INVALID_NAME_MESSAGE = "User's name cannot be blank"
+private const val INVALID_PASSWORD_MESSAGE = "An User must have a password"
+private const val INVALID_ROLE_MESSAGE = "User's Role cannot be blank"
+private const val INVALID_CREATION_DATE_MESSAGE = "An User's creation date cannot be in the future"
+private const val INVALID_EMPLOYER_FACTORY_ID_MESSAGE = "User's employer Factory Id must not be empty"
+private const val INVALID_BIRTHDAY_MESSAGE = "User must be at least 16 years old"
+
 class User private constructor(
-    val manager: User?,
-    val name: String,
-    val gender: Gender?,
+    var manager: User?,
+    name: String,
+    var gender: Gender?,
     val birthday: LocalDate,
-    val email: Email,
-    val passwordHash: String,
-    val role: String,
-    val permissions: List<Permission>,
+    var email: Email,
+    passwordHash: String,
+    role: String,
+    var permissions: List<Permission>,
     val createdAt: LocalDateTime,
-    val isActive: Boolean,
-    val employerFactoryId: UUID,
+    var isActive: Boolean,
+    employerFactoryId: UUID,
     clock: Clock
 ) : AggregateRoot() {
     init {
-        require(name.isNotBlank()) { "User's name cannot be blank" }
-        require(passwordHash.isNotBlank()) { "An User must have a password" }
-        require(role.isNotBlank()) { "User's Role cannot be blank" }
-        require(!createdAt.isAfter(LocalDateTime.now(clock))) { "An User's creation date cannot be in the future" }
-        require(employerFactoryId != EMPTY_UUID) { "User's employer Factory Id must not be empty" }
-        require(!birthday.isAfter(LocalDate.now(clock).minusYears(16))) { "User must be at least 16 years old" }
+        require(name.isNotBlank()) { INVALID_NAME_MESSAGE }
+        require(passwordHash.isNotBlank()) { INVALID_PASSWORD_MESSAGE }
+        require(role.isNotBlank()) { INVALID_ROLE_MESSAGE }
+        require(!createdAt.isAfter(LocalDateTime.now(clock))) { INVALID_CREATION_DATE_MESSAGE }
+        require(employerFactoryId != EMPTY_UUID) { INVALID_EMPLOYER_FACTORY_ID_MESSAGE }
+        require(!birthday.isAfter(LocalDate.now(clock).minusYears(16))) { INVALID_BIRTHDAY_MESSAGE }
     }
+
+    var name: String = name
+        set(value) {
+            require(value.isNotBlank()) { INVALID_NAME_MESSAGE }
+            field = value
+        }
+
+    var passwordHash: String = passwordHash
+        set(value) {
+            require(value.isNotBlank()) { INVALID_PASSWORD_MESSAGE }
+            field = value
+        }
+
+    var role: String = role
+        set(value) {
+            require(value.isNotBlank()) { INVALID_ROLE_MESSAGE }
+            field = value
+        }
+
+    var employerFactoryId: UUID = employerFactoryId
+        set(value) {
+            require(value != EMPTY_UUID) { INVALID_EMPLOYER_FACTORY_ID_MESSAGE }
+            field = value
+        }
 
     companion object {
         fun create(

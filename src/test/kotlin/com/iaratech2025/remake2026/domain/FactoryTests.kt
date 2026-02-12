@@ -64,4 +64,30 @@ class FactoryTests {
             )
         }
     }
+
+    @Test
+    fun `if Enterprise Name is blank, should fail to update object`() {
+        assertThrows<IllegalArgumentException> {
+            sut.enterpriseName = "  "
+        }
+    }
+
+    @Test
+    fun `if Industry Sector is blank, should fail to update object`() {
+        assertThrows<IllegalArgumentException> {
+            sut.industrySector = "  "
+        }
+    }
+
+    @Test
+    fun `if all data is correct, updates object successfully`() {
+        val newEnterpriseName = "New Enterprise Name"
+        val newIndustrySector = "New Industry Sector"
+
+        sut.enterpriseName = newEnterpriseName
+        sut.industrySector = newIndustrySector
+
+        assert(sut.enterpriseName == newEnterpriseName)
+        assert(sut.industrySector == newIndustrySector)
+    }
 }
