@@ -11,4 +11,5 @@ interface UserRepository {
     fun findAll(filter: UserFilter? = null, pagination: Pagination<User>): PageResult<User>
     fun save(user: User): User
     fun findById(id: UUID): User?
+    fun deleteById(id: UUID)
 }
