@@ -11,4 +11,5 @@ interface SuperAdmRepository {
     fun save(superAdmin: SuperAdmin): SuperAdmin
     fun existsByEmail(email: String): Boolean
     fun deleteById(id: UUID)
+    fun findById(id: UUID): SuperAdmin?
 }
