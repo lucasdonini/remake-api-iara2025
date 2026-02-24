@@ -1,9 +1,7 @@
 package com.iaratech2025.remake2026.application.usecase.superadm.list
 
 import com.iaratech2025.remake2026.domain.filter.SuperAdmFilter
-import com.iaratech2025.remake2026.domain.filter.UserFilter
 import com.iaratech2025.remake2026.domain.model.SuperAdmin
-import com.iaratech2025.remake2026.domain.model.User
 import com.iaratech2025.remake2026.domain.repository.SuperAdmRepository
 import com.iaratech2025.remake2026.domain.repository.pagination.PageResult
 import com.iaratech2025.remake2026.domain.repository.pagination.Pagination

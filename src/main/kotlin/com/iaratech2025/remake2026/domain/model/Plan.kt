@@ -49,4 +49,6 @@ class Plan private constructor(
             duration = duration
         )
     }
+
+    enum class PlanSortableField : SortableField<Plan> { NAME, PRICE, DURATION }
 }
