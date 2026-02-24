@@ -1,6 +1,6 @@
 package com.iaratech2025.remake2026.application.usecase.user.updateuser
 
-import com.iaratech2025.remake2026.application.exception.ApplicationNotFoundException
+import com.iaratech2025.remake2026.application.exception.NotFoundException
 import com.iaratech2025.remake2026.domain.model.User
 import com.iaratech2025.remake2026.domain.repository.UserRepository
 import org.springframework.stereotype.Component
@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component
 class UpdateUserHandler(val repository: UserRepository) {
 
     fun handle(command: UpdateUserCommand): User {
-        val user = repository.findById(command.id) ?: throw ApplicationNotFoundException.UserNotFoundByIdException(command.id.toString())
+        val user = repository.findById(command.id) ?: throw NotFoundException.UserNotFoundByIdException(command.id.toString())
 
         command.name?.let { user.name = it }
         command.isActive?.let { user.isActive = it }

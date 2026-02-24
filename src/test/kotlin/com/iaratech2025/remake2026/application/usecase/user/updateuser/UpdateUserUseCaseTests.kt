@@ -1,6 +1,6 @@
 package com.iaratech2025.remake2026.application.usecase.user.updateuser
 
-import com.iaratech2025.remake2026.application.exception.ApplicationNotFoundException
+import com.iaratech2025.remake2026.application.exception.NotFoundException
 import com.iaratech2025.remake2026.common.builders.UserBuilder
 import com.iaratech2025.remake2026.domain.model.Email
 import com.iaratech2025.remake2026.domain.repository.UserRepository
@@ -60,7 +60,7 @@ class UpdateUserUseCaseTests {
         every { repository.findById(any()) } returns null
         val command = UpdateUserCommand(EMPTY_UUID)
 
-        assertThrows< ApplicationNotFoundException.UserNotFoundByIdException> { sut.handle(command) }
+        assertThrows< NotFoundException.UserNotFoundByIdException> { sut.handle(command) }
         verify(exactly = 1) { repository.findById(command.id) }
     }
 }

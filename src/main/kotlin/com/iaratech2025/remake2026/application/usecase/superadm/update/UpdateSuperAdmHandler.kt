@@ -1,8 +1,8 @@
 package com.iaratech2025.remake2026.application.usecase.superadm.update
 
-import com.iaratech2025.remake2026.application.exception.ApplicationNotFoundException.SuperAdmNotFoundByIdException
-import com.iaratech2025.remake2026.application.exception.ApplicationUnauthorizedException.IncorrectPasswordException
-import com.iaratech2025.remake2026.application.exception.ApplicationBadRequestException.MissingCurrentPasswordException
+import com.iaratech2025.remake2026.application.exception.NotFoundException.SuperAdmNotFoundByIdException
+import com.iaratech2025.remake2026.application.exception.UnauthorizedException.IncorrectPasswordException
+import com.iaratech2025.remake2026.application.exception.BadRequestException.MissingCurrentPasswordException
 import com.iaratech2025.remake2026.application.port.PasswordHasher
 import com.iaratech2025.remake2026.domain.model.SuperAdmin
 import com.iaratech2025.remake2026.domain.repository.SuperAdmRepository

@@ -1,6 +1,6 @@
 package com.iaratech2025.remake2026.application.usecase.superadm.create
 
-import com.iaratech2025.remake2026.application.exception.ApplicationConflictException
+import com.iaratech2025.remake2026.application.exception.ConflictException
 import com.iaratech2025.remake2026.application.port.PasswordHasher
 import com.iaratech2025.remake2026.domain.model.Email
 import com.iaratech2025.remake2026.domain.repository.SuperAdmRepository
@@ -52,7 +52,7 @@ class CreateSuperAdmUseCaseTests {
         val command = validCommand()
         every { repository.existsByEmail(command.email.value) } returns true
 
-        assertThrows<ApplicationConflictException.EmailAlreadyExists> { sut.handle(command) }
+        assertThrows<ConflictException.EmailAlreadyExists> { sut.handle(command) }
         verify(exactly = 1) { repository.existsByEmail(command.email.value) }
         verify(exactly = 0) { hasher.hash(any()) }
         verify(exactly = 0) { repository.save(any()) }

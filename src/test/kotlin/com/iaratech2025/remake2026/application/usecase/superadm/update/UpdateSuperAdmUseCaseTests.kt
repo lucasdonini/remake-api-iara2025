@@ -1,7 +1,7 @@
 package com.iaratech2025.remake2026.application.usecase.superadm.update
 
-import com.iaratech2025.remake2026.application.exception.ApplicationBadRequestException
-import com.iaratech2025.remake2026.application.exception.ApplicationUnauthorizedException
+import com.iaratech2025.remake2026.application.exception.BadRequestException
+import com.iaratech2025.remake2026.application.exception.UnauthorizedException
 import com.iaratech2025.remake2026.application.port.PasswordHasher
 import com.iaratech2025.remake2026.common.builders.SuperAdminBuilder
 import com.iaratech2025.remake2026.domain.model.Email
@@ -98,7 +98,7 @@ class UpdateSuperAdmUseCaseTests {
         val command = UpdateSuperAdmCommand(id = superAdm.id, newPassword = "new password")
         every { repository.findById(command.id) } returns superAdm
 
-        assertThrows<ApplicationBadRequestException.MissingCurrentPasswordException> { sut.handle(command) }
+        assertThrows<BadRequestException.MissingCurrentPasswordException> { sut.handle(command) }
         verify(exactly = 1) { repository.findById(command.id) }
         verify(exactly = 0) { hasher.compare(any(), any()) }
         verify(exactly = 0) { hasher.hash(any()) }
@@ -115,7 +115,7 @@ class UpdateSuperAdmUseCaseTests {
         every { repository.findById(command.id) } returns superAdm
         every { hasher.compare(password = command.currentPassword!!, hashed = superAdm.passwordHash) } returns false
 
-        assertThrows<ApplicationUnauthorizedException.IncorrectPasswordException> { sut.handle(command) }
+        assertThrows<UnauthorizedException.IncorrectPasswordException> { sut.handle(command) }
         verify(exactly = 1) { repository.findById(command.id) }
         verify(exactly = 1) { hasher.compare(password = command.currentPassword!!, superAdm.passwordHash) }
         verify(exactly = 0) { hasher.hash(any()) }
